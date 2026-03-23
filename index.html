@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación II - Sección 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>Programación II - Sección 2</h1>
+    </nav>
+
+    <main class="container">
+        <section class="form-card">
+            <h2>Registro de Calificaciones</h2>
+            <form id="promedioForm">
+                <div class="row">
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="text" id="apellido" placeholder="Apellido" required>
+                </div>
+
+                <select id="semestre" required>
+                    <option value="" disabled selected>Seleccione el Semestre</option>
+                    <option value="1er Semestre">1er Semestre</option>
+                    <option value="2do Semestre">2do Semestre</option>
+                    <option value="3er Semestre">3er Semestre</option>
+                </select>
+
+                <div class="grid-notas">
+                    <input type="number" class="nota" placeholder="Nota 1" min="0" max="20" required>
+                    <input type="number" class="nota" placeholder="Nota 2" min="0" max="20" required>
+                    <input type="number" class="nota" placeholder="Nota 3" min="0" max="20" required>
+                    <input type="number" class="nota" placeholder="Nota 4" min="0" max="20" required>
+                    <input type="number" class="nota" placeholder="Nota 5" min="0" max="20" required>
+                    <input type="number" class="nota" placeholder="Nota 6" min="0" max="20" required>
+                </div>
+
+                <button type="button" onclick="calcularPromedio()">Calcular Promedio</button>
+            </form>
+
+            <div id="resultado" class="resultado-box"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Estudiante: [Tu Nombre] [Tu Apellido] | C.I: [Tu Cédula]</p>
+        <p>Próxima clase presencial: 25/03/2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
